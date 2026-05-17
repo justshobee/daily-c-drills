@@ -10,3 +10,4 @@ Write a program that counts the number of characters in the first argument strin
 $> ./count_characters "Hello, World!" | cat -e
 13$
 ```
+
