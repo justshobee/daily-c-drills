@@ -6,7 +6,7 @@
 /*   By: shobeedev <https://github.com/justshobee>           / __/   ___) |   */
 /*                                                          |_____| |____/    */
 /*   Created: 2026/05/19 09:47:18 by shobeedev               shobee4ever      */
-/*   Updated: 2026/05/19 10:29:44 by shobeedev            tfaaty fi l3oolaa   */
+/*   Updated: 2026/05/19 11:01:34 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ char	*rot_left_n(char *str, int n)
 {
 	int		i;
 
-	if (n == 0)
-		return (str);
 	i = 0;
 	while (i < n)
 	{
