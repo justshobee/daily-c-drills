@@ -5,8 +5,8 @@
 /*                                                            __) |   |_ \    */
 /*   By: shobeedev <https://github.com/justshobee>           / __/   ___) |   */
 /*                                                          |_____| |____/    */
-/*   Created: 2026/05/20 09:49:25 by shobeedev               shobee4ever      */
-/*   Updated: 2026/05/20 10:18:43 by shobeedev            tfaaty fi l3oolaa   */
+/*   Created: 2026/05/20 11:33:58 by shobeedev               shobee4ever      */
+/*   Updated: 2026/05/20 12:19:53 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,71 +53,44 @@ int		ft_atoi(char *str)
 	return (res * sign);
 }
 
-int		is_dup(char c, char *str, int index)
+void	compare_str(char *str, char *check)
 {
 	int		i;
 
 	i = 0;
-	while (i < index)
+	while (check[i] != '\0')
 	{
-		if (c == str[i])
-			return (1);
+		if (check[i] != str[i])
+		{
+			check[i] = '\0';
+			break ;
+		}
 		i++;
 	}
-	return (0);
 }
 
-void	inc_freq(int freq[], char *str)
+void	longest_common_prefix(int size, char **str)
 {
 	int		i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (i == 0 || !is_dup(str[i], str, i))
-			freq[(int)str[i]]++;
-		i++;
-	}
-}
-
-void	print_lcp(int n, int freq[])
-{
-	int		i;
-
-	i = 0;
-	while (i < 255)
-	{
-		if (freq[i] == n)
-			ft_putchar(i);
-		i++;
-	}
-}
-
-void	longest_common_prefix(int size, char **strs)
-{
-	int		freq[255] = {0};
 	int		n;
-	int		i;
 
-	n = ft_atoi(strs[1]);
-	i = 2;
+	i = 3;
+	n = ft_atoi(str[1]);
 	if (n == 1)
 	{
-		ft_putstr(strs[i]);
+		ft_putstr(str[2]);
 		return ;
 	}
 	while (i < size)
 	{
-		inc_freq(freq, strs[i]);
+		compare_str(str[i], str[2]);
 		i++;
 	}
-	print_lcp(n, freq);
+	ft_putstr(str[2]);
 }
-
 int		main(int size, char **str)
 {
 	if (size > 2)
 		longest_common_prefix(size, str);
 	ft_putchar('\n');
-	return (0);
 }
