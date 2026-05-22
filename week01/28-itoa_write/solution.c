@@ -6,7 +6,7 @@
 /*   By: shobeedev <https://github.com/justshobee>           / __/   ___) |   */
 /*                                                          |_____| |____/    */
 /*   Created: 2026/05/21 18:22:52 by shobeedev               shobee4ever      */
-/*   Updated: 2026/05/21 20:27:29 by shobeedev            tfaaty fi l3oolaa   */
+/*   Updated: 2026/05/22 09:11:35 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,6 @@ char	*ft_itoa(int nbr, char *str)
 	n = nbr;
 	div = 1;
 	i = 0;
-	if (n == 0)
-	{
-		str[i] = '0';
-		i++;
-	}
 	if (n < 0)
 	{
 		n = -n;
