@@ -6,7 +6,7 @@
 /*   By: shobeedev <https://github.com/justshobee>           / __/   ___) |   */
 /*                                                          |_____| |____/    */
 /*   Created: 2026/05/22 18:26:45 by shobeedev               shobee4ever      */
-/*   Updated: 2026/05/22 19:45:33 by shobeedev            tfaaty fi l3oolaa   */
+/*   Updated: 2026/05/23 12:00:59 by shobeedev            tfaaty fi l3oolaa   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,4 +147,5 @@ int		main(int size, char **str)
 {
 	if (size > 3)
 		palindrome_pairs(ft_atoi(str[1]), str + 2);
+	return (0);
 }
